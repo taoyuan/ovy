@@ -1,0 +1,23 @@
+{
+	"name": "ovy",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/taoyuan/ovy.git"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@types/debug": "0.0.30",
+		"@types/mocha": "^5.2.0",
+		"lerna": "^2.10.2"
+	},
+	"scripts": {
+		"bootstrap": "npm i && lerna bootstrap",
+		"release": "npm run build:full && lerna publish",
+		"clean:lerna": "lerna clean",
+		"build:full": "npm run clean:lerna && npm run bootstrap && npm test"
+	}
+}
