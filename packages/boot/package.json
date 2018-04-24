@@ -1,6 +1,6 @@
 {
   "name": "@ovy/boot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "boot",
   "license": "MIT",
   "repository": "",
@@ -10,23 +10,24 @@
   ],
   "files": [
     "README.md",
+    "index.js",
+    "index.js.map",
+    "index.d.ts",
     "lib",
     "src"
   ],
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
   "scripts": {
     "clean": "rimraf lib",
     "build": "npm run clean && echo Using TypeScript && tsc --version && tsc --pretty",
-    "test": "npm run build && mocha --compilers ts:ts-node/register --recursive \"test/**/*.test.ts\"",
+    "test": "npm run build && mocha --require ts-node/register --recursive \"test/**/*.test.ts\"",
     "serve": "npm run build && node lib/index.js",
-    "coverage": "nyc --include=\"src/**/*.ts\" --reporter=text --reporter=html --reporter=lcov mocha --compilers ts:ts-node/register --recursive \"test/**/*.test.ts\"",
+    "coverage": "nyc --include=\"src/**/*.ts\" --reporter=text --reporter=html --reporter=lcov mocha --require ts-node/register --recursive \"test/**/*.test.ts\"",
     "watch": "npm run build -- --watch",
     "watch:test": "npm run test -- --watch"
   },
   "dependencies": {
     "@loopback/context": "^0.8.0",
-    "@ovy/core": "^0.1.1",
+    "@ovy/core": "^0.1.2",
     "debug": "^3.1.0"
   },
   "devDependencies": {
