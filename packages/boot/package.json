@@ -1,6 +1,6 @@
 {
   "name": "@ovy/boot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "boot",
   "license": "MIT",
   "repository": "",
@@ -9,7 +9,9 @@
     ""
   ],
   "files": [
-    "lib"
+    "README.md",
+    "lib",
+    "src"
   ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -24,7 +26,7 @@
   },
   "dependencies": {
     "@loopback/context": "^0.8.0",
-    "@ovy/core": "^0.1.0",
+    "@ovy/core": "^0.1.1",
     "debug": "^3.1.0"
   },
   "devDependencies": {
@@ -58,5 +60,8 @@
     ],
     "reporter": [],
     "all": true
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

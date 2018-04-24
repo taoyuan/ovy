@@ -1,6 +1,6 @@
 {
   "name": "@ovy/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The ovy core module",
   "license": "MIT",
   "repository": "",
@@ -9,7 +9,9 @@
     ""
   ],
   "files": [
-    "lib"
+    "README.md",
+    "lib",
+    "src"
   ],
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -56,5 +58,8 @@
     ],
     "reporter": [],
     "all": true
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
